@@ -13,6 +13,10 @@ public class Conta {
         this.id = contadorID;
         contadorID++;
     }
+    public void imprimeIDeNome(){
+        System.out.println(this.id);
+        System.out.println(this.nome);
+    }
 
     private boolean temsaldo(double valor) {
         if (valor<=0){
@@ -50,6 +54,7 @@ public class Conta {
 
     public void imprime(){
         System.out.println("--------------");
+        System.out.println("ID DA CONTA:"+this.id);
         System.out.println("NOME DO USUÁRIO:"+this.nome);
         System.out.println("SALDO EM CONTA:"+this.saldo);
         System.out.println("DINHEIRO SACADO/TRANSFERIDO:"+this.saldoRetirado);
@@ -69,5 +74,10 @@ public class Conta {
 
     public double getSaldoRetirado() {
         return saldoRetirado;
+    }
+
+    @Override
+    public String toString() {
+        return "id:"+id+" "+"nome:"+this.nome;
     }
 }
